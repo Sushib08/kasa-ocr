@@ -1,0 +1,42 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 5vh 6vw 0 6vw;
+  align-items: center;
+
+  .logo {
+    --logo-color: #ff6060;
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 50px;
+
+    a {
+      color: #ff6060;
+      text-decoration: none;
+      font-size: 24px;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+
+      &.active-link {
+        text-decoration: solid 1px #ff6060;
+      }
+    }
+
+    @media screen and (min-width: 350px) and (max-width: 600px) {
+      gap: calc(20px + (30 - 20) * ((100vw - 350px) / (600 - 350)));
+    }
+  }
+
+  @media screen and (min-width: 350px) and (max-width: 600px) {
+    .logo {
+      width: 145px;
+      height: 47px;
+    }
+
+    .nav-links a {
+      font-size: calc(14px + (20 - 14) * ((100vw - 350px) / (600 - 350)));
+    }
+  }
+}

@@ -3,6 +3,7 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Error404 from "./Pages/Error404";
 import Listing from "./Pages/Listing";
+import "./scss/app.scss";
 
 function App() {
   return (
