@@ -1,22 +1,46 @@
+$background-color: black;
+$text-color: white;
+$footer-height: 180px;
+$logo-width: 122px;
+$logo-height: 39.44px;
+$logo-margin-top: 5vh;
+
 footer {
-  background-color: black;
-  width: 100vw;
-  height: 180px;
+  background-color: $background-color;
+  width: 100%;
+  height: $footer-height;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 25px;
-}
 
-.rights {
-  color: white;
-  font-size: 24px;
-  font-family: "Montserrat", sans-serif;
-}
+  .rights {
+    color: $text-color;
+    font-size: 24px;
+    font-family: "Montserrat", sans-serif;
 
-.logo-footer svg {
-  width: 122px !important;
-  height: 39.44px !important;
-  margin-top: 5vh;
+    @media screen and (max-width: 600px) {
+      font-size: 12px;
+      max-width: 30%; // Pour forcer le contenu à passer à la ligne
+      text-align: center;
+      margin-bottom: 5vh;
+    }
+
+    @media screen and (min-width: 350px) and (max-width: 600px) {
+      font-size: calc(12px + (18 - 12) * ((100vw - 350px) / (600 - 350)));
+    }
+  }
+
+  .logo-footer {
+    svg {
+      width: $logo-width !important;
+      height: $logo-height !important;
+      margin-top: $logo-margin-top;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    height: 250px; // Ajuster la hauteur du footer dans la media query
+  }
 }

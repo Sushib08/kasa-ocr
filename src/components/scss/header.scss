@@ -1,11 +1,19 @@
+$header-margin-top: 5vh;
+$header-margin-horizontal: 6vw;
+$logo-color: #ff6060;
+$nav-link-color: #ff6060;
+$nav-link-active-border: solid 1px #ff6060;
+$font-family: "Montserrat", sans-serif;
+
 header {
   display: flex;
   justify-content: space-between;
-  margin: 5vh 6vw 0 6vw;
+  margin: $header-margin-top $header-margin-horizontal 0
+    $header-margin-horizontal;
   align-items: center;
 
   .logo {
-    --logo-color: #ff6060;
+    color: $logo-color;
   }
 
   .nav-links {
@@ -13,14 +21,14 @@ header {
     gap: 50px;
 
     a {
-      color: #ff6060;
+      color: $nav-link-color;
       text-decoration: none;
       font-size: 24px;
-      font-family: "Montserrat", sans-serif;
+      font-family: $font-family;
       font-weight: 500;
 
       &.active-link {
-        text-decoration: solid 1px #ff6060;
+        text-decoration: $nav-link-active-border;
       }
     }
 
@@ -30,13 +38,13 @@ header {
   }
 
   @media screen and (min-width: 350px) and (max-width: 600px) {
-    .logo {
+    svg {
       width: 145px;
       height: 47px;
     }
 
     .nav-links a {
-      font-size: calc(14px + (20 - 14) * ((100vw - 350px) / (600 - 350)));
+      font-size: calc(12px + (20 - 12) * ((100vw - 350px) / (600 - 350)));
     }
   }
 }
