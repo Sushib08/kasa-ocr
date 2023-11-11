@@ -38,22 +38,31 @@ Avant de commencer, assurez-vous d'avoir Node.js et npm installés sur votre mac
 
 Vous pouvez cloner le projet en utilisant la commande suivante dans votre terminal:
 
-git clone https://github.com/Sushib08/kasa-ocr.git
+git clone : `https://github.com/Sushib08/kasa-ocr.git`
 
 ### 2. Installer les Dépendances
 
 Accédez au répertoire du projet nouvellement cloné avec la commande:
+
+```bash
 cd kasa-ocr
+```
 
 Ensuite, installez toutes les bibliothèques et frameworks nécessaires en exécutant la commande:
+
+```bash
 npm install
+```
+
 Cette commande parcourra le fichier package.json et installera toutes les dépendances nécessaires répertoriées.
 
 ### 3. Lancer le Projet
 
 Une fois l'installation des dépendances terminée, vous pouvez lancer le projet avec la commande:
 
+```bash
 npm run start
+```
 
 Cette commande démarre l'application React et ouvre votre navigateur par défaut pour afficher l'application KASA. Si cela ne se produit pas automatiquement, vous pouvez accéder à http://localhost:3000/ dans votre navigateur.
 
