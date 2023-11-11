@@ -4,7 +4,7 @@
   height: 200px;
   margin: 10vh auto;
   border-radius: 25px;
-  border: 1px solid black;
+  // border: 1px solid black;
   overflow: hidden; /* Assure that child elements won't overflow */
 }
 
@@ -22,7 +22,7 @@
   z-index: -1;
 }
 
-h1 {
+.title-home {
   color: white;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;

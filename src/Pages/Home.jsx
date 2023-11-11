@@ -12,7 +12,7 @@ const Home = () => {
       <Header />
       <main>
         <div className="contain">
-          <h1>Chez vous, partout et ailleurs</h1>
+          <h1 className="title-home">Chez vous, partout et ailleurs</h1>
         </div>
 
         <div className="cards-contain">

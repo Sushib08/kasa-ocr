@@ -10,18 +10,18 @@ const Header = () => {
     <header>
       <LogoSvg fill="#FF6060" />
       <div className="nav-links">
-        <NavLink to="/" currentPath={location.pathname} color="#FF6060">
+        <NavLinks to="/" currentPath={location.pathname} color="#FF6060">
           Accueil
-        </NavLink>
-        <NavLink to="/about" currentPath={location.pathname} color="#FF6060">
+        </NavLinks>
+        <NavLinks to="/about" currentPath={location.pathname} color="#FF6060">
           A Propos
-        </NavLink>
+        </NavLinks>
       </div>
     </header>
   );
 };
 
-const NavLink = ({ to, currentPath, children, color }) => {
+const NavLinks = ({ to, currentPath, children, color }) => {
   const isActive = to === currentPath;
 
   return (
