@@ -1,14 +1,14 @@
 import React from "react";
-import { useParams, Navigate } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import ListingData from "../data/listing.json";
-import Error404 from "./Error404"; // Make sure to import your Error404 component
+import Error404 from "./Error404";
 
 const Lodgment = () => {
   const { id } = useParams();
   const lodgingDetails = ListingData.find((lodging) => lodging.id === id);
 
   if (!lodgingDetails) {
-    return <Navigate to="/404" />;
+    return <Error404 />;
   }
 
   return (
