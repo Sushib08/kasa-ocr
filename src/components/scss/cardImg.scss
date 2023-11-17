@@ -1,0 +1,76 @@
+.contain {
+  position: relative;
+  width: 86.5vw;
+  height: 200px;
+  margin: 10vh auto;
+  border-radius: 25px;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-size: 100% auto;
+    background-position: center;
+    filter: brightness(70%);
+    z-index: -1;
+  }
+}
+
+.title-home {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  font-size: 48px;
+  white-space: nowrap;
+
+  @media (min-width: 375px) and (max-width: 900px) {
+    font-size: calc(18px + 2vw);
+    top: auto;
+    bottom: 5%;
+    left: 5%;
+    transform: none;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 630px) and (max-width: 900px) {
+    width: 50%;
+  }
+
+  @media (min-width: 470px) and (max-width: 629px) {
+    width: 60%;
+    white-space: normal;
+    line-height: 1.2;
+  }
+
+  @media (min-width: 375px) and (max-width: 470px) {
+    width: 65%;
+    white-space: normal;
+    line-height: 1.2;
+  }
+}
+
+.cards-contain {
+  width: 86.5vw;
+  height: auto;
+  background-color: #f6f6f6;
+  margin: 0 auto 10vh auto;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-bottom: 5vh;
+
+  @media (min-width: 375px) and (max-width: 1024px) {
+    background-color: white;
+  }
+}

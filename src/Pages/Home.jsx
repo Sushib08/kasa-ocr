@@ -1,9 +1,10 @@
 import React from "react";
+import "../Pages/scss/home.scss";
 import { NavLink } from "react-router-dom";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 import Cards from "../components/elements/Cards";
-import "./scss/home.scss";
+import CardImg from "../components/elements/CardImg";
 import ListingData from "../data/listing.json";
 
 const Home = () => {
@@ -11,9 +12,10 @@ const Home = () => {
     <>
       <Header />
       <main>
-        <div className="contain">
-          <h1 className="title-home">Chez vous, partout et ailleurs</h1>
-        </div>
+        <CardImg
+          title={"Chez vous, partout et ailleurs"}
+          backgroundClass="img1-bg"
+        />
 
         <div className="cards-contain">
           {ListingData.map((lodging, index) => (

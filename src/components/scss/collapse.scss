@@ -1,0 +1,50 @@
+// collapse.scss
+
+.collapse-contain {
+  display: flex;
+  justify-content: space-between;
+  padding: 1vh 2vw;
+  width: 65vw;
+  background: var(--Red, #ff6060);
+  border-radius: 5px;
+
+  h3 {
+    color: #fff;
+    font-family: "Montserrat", sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  button {
+    border: none;
+    background-color: #ff6060;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .rotate {
+    transform: rotate(-180deg);
+  }
+}
+
+.desc-contain {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease-in-out;
+  background-color: #f6f6f6;
+  width: 69vw;
+  margin-top: -2vh;
+
+  p {
+    color: #ff6060;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 1em;
+  }
+}
+
+.desc-expanded {
+  max-height: 200px;
+}
