@@ -9,6 +9,16 @@ const Collapse = ({ title, desc }) => {
     setIsExpanded((prevExpanded) => !prevExpanded);
   };
 
+  const renderList = (items) => {
+    return (
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>{item}</li>
+        ))}
+      </ul>
+    );
+  };
+
   return (
     <>
       <div className="collapse-contain" onClick={toggleExpand}>
@@ -18,7 +28,8 @@ const Collapse = ({ title, desc }) => {
         </button>
       </div>
       <div className={`desc-contain ${isExpanded ? "desc-expanded" : ""}`}>
-        <p>{desc}</p>
+        {/* Afficher une liste <ul> si 'desc' est un tableau */}
+        {Array.isArray(desc) ? renderList(desc) : <p>{desc}</p>}
       </div>
     </>
   );

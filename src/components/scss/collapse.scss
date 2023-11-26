@@ -32,7 +32,7 @@
   transition: max-height 0.4s ease-in-out;
   background-color: #f6f6f6;
   width: 69vw;
-  margin-top: -2vh;
+  margin-top: -4vh;
 
   p {
     color: #ff6060;
@@ -41,8 +41,24 @@
     margin: 0;
     padding: 1em;
   }
+  li {
+    color: #ff6060;
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    padding: 3px;
+  }
+  ul {
+    padding: 1em;
+    list-style: none;
+  }
 }
 
 .desc-expanded {
   max-height: 200px;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1245px) {
+  .desc-expanded {
+    max-height: 600px;
+  }
 }
