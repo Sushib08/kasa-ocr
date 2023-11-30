@@ -1,3 +1,7 @@
+// Variables
+$font-montserrat: "Montserrat", sans-serif;
+
+// Styles
 .card {
   position: relative;
   width: 22vw;
@@ -6,14 +10,22 @@
   margin: 10vh 2vw 0 2vw;
   overflow: hidden;
 
-  @media (min-width: 375px) and (max-width: 1024px) {
-    width: 85.5vw;
-    margin: 2vh;
+  @media (min-width: 601px) and (max-width: 1024px) {
+    width: 86vw;
+    height: 40vh;
+    margin: 1vh;
   }
 
-  @media (min-width: 375px) and (max-width: 600px) {
+  @media (min-width: 375px) and (max-width: 450px) {
     width: 86.5vw;
-    height: 40vh;
+    height: 25vh;
+    margin: 1vh;
+  }
+
+  @media (min-width: 451px) and (max-width: 600px) {
+    width: 86.5vw;
+    height: 35vh;
+    margin: 1vh;
   }
 }
 
@@ -51,8 +63,12 @@
   bottom: 2vh;
   left: 2vw;
   right: 2vw;
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-montserrat;
   font-size: 18px;
   color: white;
   margin: 0;
+
+  @media (min-width: 375px) and (max-width: 600px) {
+    width: 75%;
+  }
 }

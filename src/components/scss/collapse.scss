@@ -1,10 +1,27 @@
 .collapse-contain {
   display: flex;
   justify-content: space-between;
-  padding: 2vh 2vw;
+  align-items: center; /* Ajout pour centrer verticalement */
+  padding: 2vh 2vw 2vh 0.5vw;
   width: 65vw;
+  height: 0.1vh;
   background: var(--Red, #ff6060);
   border-radius: 5px;
+
+  @media screen and (min-width: 375px) and (max-width: 600px) {
+    width: 83vw;
+    margin: -1vh;
+
+    h3 {
+      font-size: 14px;
+    }
+
+    button {
+      img {
+        height: 10px;
+      }
+    }
+  }
 
   h3 {
     color: #fff;
@@ -12,6 +29,10 @@
     font-size: 24px;
     font-style: normal;
     font-weight: 500;
+
+    @media screen and (min-width: 375px) and (max-width: 600px) {
+      font-size: 14px;
+    }
   }
 
   button {
@@ -19,6 +40,11 @@
     background-color: #ff6060;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   & .rotate {
@@ -31,8 +57,13 @@
   max-height: 0;
   transition: max-height 0.4s ease-in-out;
   background-color: #f6f6f6;
-  width: 69vw;
-  margin-top: -4vh;
+  width: 67.5vw;
+  margin-top: -3vh;
+
+  @media screen and (min-width: 375px) and (max-width: 600px) {
+    width: 85vw;
+    margin-top: -2vh;
+  }
 
   p {
     color: #ff6060;
@@ -55,6 +86,11 @@
 
 .desc-expanded {
   max-height: 200px;
+
+  @media screen and (min-width: 375px) and (max-width: 600px) {
+    width: 85vw;
+    margin-top: -2vh;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 1245px) {
