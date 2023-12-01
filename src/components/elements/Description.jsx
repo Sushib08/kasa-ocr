@@ -21,11 +21,11 @@ const Description = ({
     const emptyStars = 5 - filledStars;
 
     const filledArray = Array.from({ length: filledStars }, (_, index) => (
-      <img key={index} src={RatingFilled} alt="filled star" />
+      <img key={`filled-${index}`} src={RatingFilled} alt="filled star" />
     ));
 
     const emptyArray = Array.from({ length: emptyStars }, (_, index) => (
-      <img key={index} src={RatingEmpty} alt="empty star" />
+      <img key={`empty-${index}`} src={RatingEmpty} alt="empty star" />
     ));
 
     return [...filledArray, ...emptyArray];
